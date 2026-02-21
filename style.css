@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    display: flex;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 40%;
+    height: auto;
+    background: #000;
+}
+
+.img-card {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-content {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+h1 {
+    font-size: 28px;
+    color: hsl(212, 19%, 35%);
+    margin: 0;
+    font-weight: 800;
+}
+
+p {
+    font-size: 18px;
+    color: hsl(212, 19%, 35%);
+    margin: 20px 0;
+}
+
+.bottom-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.author-name {
+    font-size: 14px;
+    color: hsl(212, 19%, 35%);
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+}
+/* 
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%) */
+
+.publish-date{
+    font-size: 14px;
+    color: hsl(214, 17%, 51%);
+    margin: 0;
+}
+
+.share-button {
+    background-color: hsl(210, 46%, 95%);
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-svg {
+    width: 15px;
+    height: 13px;
+    fill: hsl(212, 19%, 35%);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 10px;
+    font-size: 11px;
+}
+
+.share-options {
+    position: absolute;
+    width: 200px;
+    bottom: 50px;
+    background-color: hsl(212, 19%, 35%);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    right: 17.5%;
+    top: 52%;
+    bottom: 43%;
+}
+
+.share-options span {
+    color: hsl(214, 17%, 51%);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.shape {
+    width: 20px;
+    height: 20px;
+    background-color: hsl(212, 19%, 35%);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 56%;
+    right: 23%;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width:950px){
+    .share-options {
+        top: 57.5%;
+        height: 30px;
+        right: 16%;
+    }
+    .shape{
+        top: 61%;
+        right: 26%;
+    }
+}
+
+@media (max-width:810px){
+    .share-options {
+        top: 62.5%;
+        height: 30px;
+        right: 16%;
+    }
+    .shape{
+        top: 66%;
+        right: 27%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .share-options {
+        right: 5%;
+        top: 87.5%;
+        bottom: auto;
+        width: 87.5%;
+        height: 50px;
+        justify-content:start;
+        border-radius: 10px;
+    }
+    .share-options span {
+        margin-left: 20px;
+    }
+    .share-options img{
+        margin-left: 20px;
+    }
+    .shape {
+        top: 64%;
+        right: 16%;
+        display: none !important;
+    }
+
+    .share-button{
+        position: relative;
+        right: 10%;
+        top: 7px;
+        z-index: 1;
+    }
+}
+@media (max-width:644px){
+    .share-options {
+        top: 85.5%;
+        width: 87%;
+    }
+}
+@media (max-width: 480px) {
+    .card-content {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    .share-options {
+        top: 77.5%;
+        width: 85%;
+    }
+}
+@media (max-width:412px){
+    .share-options {
+        top: 78.5%;
+        width: 85%;
+    }
+}
+
+@media (max-width:375px){
+    .share-options {
+        top: 85.5%;
+    }
+}
+
+@media (max-width:366px){
+    .share-options {
+        top: 79.5%;
+        width: 85%;
+    }
+    .share-button{
+        top: -3px;
+    }
+}
